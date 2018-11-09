@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all overrides/extensions to bootstrap css
+// -----------------------------------------------------------------------------
+.navbar {
+    background-color: #f8f8fa;
+    .navbar-toggler {
+        margin-right: -5px;
+        border: 0;
+        color: $primary-color;
+        &.collapsed {
+            color: #585858;
+        }
+        .navbar-toggler-icon {
+            width: auto;
+            height: auto;
+            background-image: none;
+            font-size: 26px;
+        }
+    }
+}

@@ -48,4 +48,7 @@ gulp.task("watch", function() {
   gulp.watch("./js/app.js", ["build:js"]);
 });
 
+gulp.task("build", ["compile:scss", "minify:css", "build:js"]);
+
+
 gulp.task("default", ["watch"]);

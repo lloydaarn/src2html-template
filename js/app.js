@@ -1,3 +1,22 @@
+// browser update
+var $buoop = {
+    required: {
+        e: 16,
+        f: 58,
+        o: 51,
+        o_a: 45,
+        s: -2,
+        c: "67.0.3396.12",
+        y: 18.1,
+        v: "1.10",
+        uc: 11.5,
+        samsung: 7.0
+    },
+    insecure: true,
+    api: 2019.01,
+    reminder: 0,
+};
+
 var _windowSize = function () {
     var e = window,
         a = 'inner';

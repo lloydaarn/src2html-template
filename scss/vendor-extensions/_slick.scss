@@ -1,16 +1,6 @@
 /* Slider */
 .slick-loading .slick-list {
-    background: #fff url('../vendor/slick/ajax-loader.gif') center center no-repeat;
-}
-
-/* Icons */
-@font-face {
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('../vendor/slick/font/slick.eot');
-    src: url('../vendor/slick/font/slick.eot?#iefix') format('embedded-opentype'), url('../vendor/slick/font/slick.woff') format('woff'), url('../vendor/slick/font/slick.ttf') format('truetype'), url('../vendor/slick/font/slick.svg#slick') format('svg');
+    background: #fff url('../vendors/slick/ajax-loader.gif') center center no-repeat;
 }
 
 /* Arrows */
@@ -19,6 +9,7 @@
     font-size: 0;
     line-height: 0;
     position: absolute;
+    z-index: 2;
     top: 50%;
     display: block;
     width: 20px;
@@ -57,13 +48,17 @@
 
 .slick-prev:before,
 .slick-next:before {
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    color: white;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 20px;
+    color: #ddd;
 }
 
 .slick-prev {
@@ -76,11 +71,11 @@
 }
 
 .slick-prev:before {
-    content: '←';
+    content: "\f137";
 }
 
 [dir='rtl'] .slick-prev:before {
-    content: '→';
+    content: "\f138";
 }
 
 .slick-next {
@@ -93,11 +88,11 @@
 }
 
 .slick-next:before {
-    content: '→';
+    content: "\f138";
 }
 
 [dir='rtl'] .slick-next:before {
-    content: '←';
+    content: "\f137";
 }
 
 /* Dots */
@@ -152,20 +147,18 @@
 }
 
 .slick-dots li button:before {
-    font-family: 'slick';
-    font-size: 6px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    content: '•';
-    text-align: center;
-    opacity: .25;
-    color: black;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 12px;
+    color: #ddd;
+    content: "\f111";
 }
 
 .slick-dots li.slick-active button:before {

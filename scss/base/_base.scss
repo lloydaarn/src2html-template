@@ -1,6 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+
+/**
+ * Basic styles for global tags
+ */
+
+/**
+ * Basic styles for links
+ */
 a {
     color: inherit;
     text-decoration: none;
@@ -9,17 +17,17 @@ a {
         text-decoration: underline;
     }
 }
-
 .btn,
 a {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 }
-
 hr {
     border-color: #e8e4e3;
 }
-
+/**
+ * Basic styles for input fields
+ */
 input[type="email"],
 input[type="password"],
 input[type="text"],
@@ -30,11 +38,9 @@ textarea {
     -webkit-focus-ring-color: none;
     outline: none;
 }
-
 textarea {
     resize: none;
 }
-
 iframe {
     display: block;
 }

@@ -2,8 +2,8 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 @mixin transition($sec) {
-    -webkit-transition: all $sec cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all $sec cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transition: all $sec cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transition: all $sec cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 @mixin rotate($deg) {
@@ -23,10 +23,10 @@
 
 @mixin scale($x, $y) {
     -webkit-transform: scale($x, $y);
-    -moz-transform: scale($x, $y);
-    -o-transform: scale($x, $y);
-    -ms-transform: scale($x, $y);
-    transform: scale($x, $y);
+    -moz-transform:  scale($x, $y);
+    -o-transform:  scale($x, $y);
+    -ms-transform:  scale($x, $y);
+    transform:  scale($x, $y);
 }
 
 @mixin translate($x, $y) {
@@ -47,7 +47,7 @@
     height: 100%;
     -o-object-fit: $val;
     object-fit: $val;
-    font-family: "object-fit:" + $val;
+    font-family: 'object-fit:'+$val;
 }
 
 @mixin link-unstyled {

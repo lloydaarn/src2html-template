@@ -9,10 +9,9 @@
     <!-- google fonts -->
 
     <!-- vendor css -->
-    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendors/animate-on-scroll/aos.css">
-    <link rel="stylesheet" href="./vendors/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="./vendors/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./vendor/slick/slick.css">
     <!-- app css -->
     <link rel="stylesheet" href="./css/app.min.css" />
 </head>
@@ -20,30 +19,28 @@
 <body>
     <!-- header -->
     <div class="navbar-wrapper">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="./"><img src="./img/logo.png" alt=""></a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="./">Brand</a>
+            
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fal fa-bars"></i></span>
+            </button>
 
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fal fa-bars"></i></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="main-navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Le Roi De La Fraise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./news.html">News</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>
@@ -54,17 +51,18 @@
     </div>
 
     <!-- scrolltop button -->
-    <div class="scroll-top-btn btn">
-        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    <div class="scroll-top-btn">
+        <div class="btn">
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </div>
     </div>
 
     <!-- scripts -->
-    <script src="./vendors/jquery/dist/jquery.min.js"></script>
-    <script src="./vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./vendors/animate-on-scroll/aos.js"></script>
-    <script src="./vendors/jquery-validate/dist/jquery.validate.min.js"></script>
-    <script src="./vendors/slick/slick.min.js"></script>
-    <script src="./vendors/object-fit/ofi.min.js"></script>
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./vendor/jquery-validate/dist/jquery.validate.min.js"></script>
+    <script src="./vendor/slick/slick.min.js"></script>
+    <script src="./vendor/object-fit/ofi.min.js"></script>
     <script src="./js/app.min.js"></script>
 </body>
 

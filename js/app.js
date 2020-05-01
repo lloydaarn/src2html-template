@@ -1,71 +1,93 @@
-// browser update
-var $buoop = {
-    required: {
-        e: 16,
-        f: 58,
-        o: 51,
-        o_a: 45,
-        s: -2,
-        c: "67.0.3396.12",
-        y: 18.1,
-        v: "1.10",
-        uc: 11.5,
-        samsung: 7.0
-    },
-    insecure: true,
-    api: 2019.01,
-    reminder: 0,
-};
-
-var _windowSize = function () {
-    var e = window,
-        a = 'inner';
-    if (!('innerWidth' in window)) {
-        a = 'client';
-        e = document.documentElement || document.body;
-    }
-    return {
-        width: e[a + 'Width'],
-        height: e[a + 'Height']
-    };
+var mainApp = {
+    windowWidth: $(window).width(),
+    windowHeight: $(window).height(),
+    $root: $("body, html"),
+    $body: $("body"),
 }
 
-
 // scroll to top button
-var _scrollTopBtn = function () {
+var _scrollTopBtn = function() {
     var scrollTopBtnFlag = true;
-    var $scrollTopBtn = $('.scroll-top-btn');
-    var $root = $('body, html');
+    var $scrollTopBtn = $(".scroll-top-btn");
 
-    $scrollTopBtn.click(function () {
-        $root.animate({
+    $scrollTopBtn.click(function() {
+        mainApp.$root.animate({
             scrollTop: 0
         }, 1000);
         return false;
     });
 
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         // reveal scroll top button
         if ($(this).scrollTop() > 500) {
             if (scrollTopBtnFlag) {
-                $scrollTopBtn.addClass('reveal-btn');
+                $scrollTopBtn.addClass("reveal-btn");
                 scrollTopBtnFlag = false;
             }
         } else {
             if (!scrollTopBtnFlag) {
-                $scrollTopBtn.removeClass('reveal-btn');
+                $scrollTopBtn.removeClass("reveal-btn");
                 scrollTopBtnFlag = true;
             }
         }
 
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            $scrollTopBtn.removeClass('reveal-btn');
+            $scrollTopBtn.removeClass("reveal-btn");
             scrollTopBtnFlag = true;
         }
+
     });
 }
 
+// reveal-on-scroll
+var _revealOnScroll = function() {
+    var $window = $(window);
+    var viewportHeight = $(window).innerHeight();
+    var revealView = (viewportHeight * .70);
 
-$(document).ready(function () {
+    $(window).scroll(function() {
+
+        var scrolledTop = $window.scrollTop();
+
+        $(".reveal-on-scroll:not(.animated)").each(function() {
+            var $this = $(this);
+            var offsetTop = $this.offset().top;
+
+            if (scrolledTop > offsetTop - revealView) {
+                $this.addClass('animated ' + $this.data('animation'));
+            }
+        });
+    });
+
+    $("[data-animation-duration]").each(function(index) {
+        var $this = $(this);
+        var animDuration = $this.data("animation-duration");
+        $this.css({
+            '-webkit-animation-duration': animDuration + "s",
+            "animation-duration": animDuration + "s"
+        })
+    });
+
+    $("[data-animation-delay]").each(function(index) {
+        var $this = $(this);
+        var animDelay = $this.data("animation-delay");
+        $this.css({
+            '-webkit-animation-delay': animDelay + "s",
+            "animation-delay": animDelay + "s"
+        })
+    });
+}
+
+$(document).ready(function() {
+    _revealOnScroll();
     _scrollTopBtn();
+
+    $(window).resize(function () {
+        if ($(this).width() != mainApp.windowWidth) {
+            mainApp.windowWidth = $(this).width();
+        }
+    });
+    $(window).on("orientationchange", function() {
+        mainApp.windowWidth = $(window).width();
+    });
 });

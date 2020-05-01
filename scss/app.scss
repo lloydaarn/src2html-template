@@ -3,7 +3,8 @@
 // 1. Configuration
 @import
   'abstracts/variables',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/animate';
 
 // 2. Vendors
 @import
@@ -15,7 +16,6 @@
   'base/base',
   'base/fonts',
   'base/typography',
-  'base/spacing',
   'base/utils';
 
 // 4. Components

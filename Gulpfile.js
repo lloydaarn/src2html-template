@@ -6,9 +6,11 @@ var uglify = require("gulp-uglify");
 var srcmaps = require("gulp-sourcemaps");
 var livereload = require("gulp-livereload");
 var connect = require("gulp-connect");
+var wait = require("gulp-wait");
 
 gulp.task("compile:scss", function() {
   return gulp.src("./scss/*.scss")
+    .pipe(wait(500))
     .pipe(srcmaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe(srcmaps.write("."))

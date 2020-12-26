@@ -1,56 +1,73 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var cleanCSS = require("gulp-clean-css");
-var rename = require("gulp-rename");
-var uglify = require("gulp-uglify");
-var srcmaps = require("gulp-sourcemaps");
-var livereload = require("gulp-livereload");
-var connect = require("gulp-connect");
-var wait = require("gulp-wait");
+// Initialize modules
+// Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
+const { src, dest, watch, series, parallel } = require('gulp');
 
-gulp.task("compile:scss", function() {
-  return gulp.src("./scss/*.scss")
-    .pipe(wait(500))
-    .pipe(srcmaps.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(srcmaps.write("."))
-    .pipe(gulp.dest("./css"))
-    .pipe(livereload());
-});
+// Importing all the Gulp-related packages we want to use
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require("browser-sync").create();
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const rename = require('gulp-rename');
 
-gulp.task("minify:css", function() {
-  gulp.src("./scss/*.scss")
-    .pipe(srcmaps.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(cleanCSS())
-    .pipe(rename({
-      suffix: ".min"
-    }))
-    .pipe(srcmaps.write("."))
-    .pipe(gulp.dest("./css"));
-});
+// File paths
+const path = { 
+    scss: './scss/**/*.scss',
+    js: './js/app.js'
+}
 
-gulp.task("build:js", function() {
-  gulp.src("./js/app.js")
-    .pipe(uglify())
-    .pipe(rename("app.min.js"))
-    .pipe(gulp.dest("./js"));
-  console.log("changes made on js");
-});
+// Sass task: compiles the style.scss file into style.css
+function build_css(){    
+    return src(path.scss)
+        .pipe(sourcemaps.init()) // initialize sourcemaps first
+        .pipe(sass()) // compile SCSS to CSS
+        .on('error', sass.logError)
+        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+        .pipe(rename({
+          suffix: '.min'
+        }))
+        .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
+        .pipe(dest('./css'))// put final CSS in dist folder
+        .pipe(browserSync.stream()); 
+     
+}
 
-gulp.task("connect", function() {
-  connect.server({
-      port: 4200,
-  });
-})
-
-gulp.task("watch", function() {
-  livereload.listen();
-  gulp.watch("./scss/**/*.scss", ["compile:scss", "minify:css"]);
-  gulp.watch("./js/app.js", ["build:js"]);
-});
-
-gulp.task("build", ["compile:scss", "minify:css", "build:js"]);
+// JS task: concatenates and uglifies JS files to script.js
+function build_js(){
+    return src(path.js)
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(rename({
+          suffix: ".min"
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(dest('./js')
+    );
+}
 
 
-gulp.task("default", ["watch"]);
+// Watch task: watch SCSS and JS files for changes
+// If any change, run scss and js tasks simultaneously
+function watch_task(){
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    watch([path.scss, path.js],
+        {interval: 1000, usePolling: true}, //Makes docker work
+        series(
+            parallel(build_css, build_js),
+        )
+    );    
+}
+
+// Export the default Gulp task so it can be run
+// Runs the scss and js tasks simultaneously
+exports.default = series(
+    parallel(build_css, build_js), 
+    watch_task
+);

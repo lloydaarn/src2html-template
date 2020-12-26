@@ -1,23 +1,8 @@
-// browser update
-var $buoop = {
-    required: {
-        e: 16,
-        f: 58,
-        o: 51,
-        o_a: 45,
-        s: -2,
-        c: "67.0.3396.12",
-        y: 18.1,
-        v: "1.10",
-        uc: 11.5,
-        samsung: 7.0
-    },
-    insecure: true,
-    api: 2019.01,
-    reminder: 0,
-};
+var app = {};
 
-var _windowSize = function () {
+app.$root = $('html, body');
+
+app.windowSize = function () {
     var e = window,
         a = 'inner';
     if (!('innerWidth' in window)) {
@@ -35,10 +20,9 @@ var _windowSize = function () {
 var _scrollTopBtn = function () {
     var scrollTopBtnFlag = true;
     var $scrollTopBtn = $('.scroll-top-btn');
-    var $root = $('body, html');
 
     $scrollTopBtn.click(function () {
-        $root.animate({
+        app.$root.animate({
             scrollTop: 0
         }, 1000);
         return false;

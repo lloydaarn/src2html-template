@@ -1,3 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.content-section-row {
+  position: relative;
+}
+
+.bg-img-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+  }
+}

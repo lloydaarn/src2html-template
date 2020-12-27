@@ -24,17 +24,16 @@ function build_css(){
         .pipe(sourcemaps.init()) // initialize sourcemaps first
         .pipe(sass()) // compile SCSS to CSS
         .on('error', sass.logError)
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+        .pipe(postcss([ autoprefixer(), cssnano() ])) // apply autoprefixer and optimize/minify 
         .pipe(rename({
           suffix: '.min'
         }))
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(dest('./css'))// put final CSS in dist folder
-        .pipe(browserSync.stream()); 
-     
+        .pipe(dest('./css')) // put final CSS in dist folder
+        .pipe(browserSync.stream());  // injext new css for live reloading
 }
 
-// JS task: concatenates and uglifies JS files to script.js
+// JS task: minify js and add sourcemaps
 function build_js(){
     return src(path.js)
         .pipe(sourcemaps.init())
@@ -58,11 +57,13 @@ function watch_task(){
     });
 
     watch([path.scss, path.js],
-        {interval: 1000, usePolling: true}, //Makes docker work
+        {interval: 1000, usePolling: true},
         series(
             parallel(build_css, build_js),
         )
-    );    
+    );
+    
+    watch('*.html').on('change', browserSync.reload);
 }
 
 // Export the default Gulp task so it can be run
@@ -71,3 +72,6 @@ exports.default = series(
     parallel(build_css, build_js), 
     watch_task
 );
+
+// build js and css files for production
+exports.build = parallel(build_css, build_js);

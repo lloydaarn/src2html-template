@@ -4,7 +4,7 @@
   "description": "impulsion src2html template",
   "main": "Gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:tailwind": "tailwind build -i tailwind/style.css -o css/tailwind.css"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,8 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.4"
   }
 }

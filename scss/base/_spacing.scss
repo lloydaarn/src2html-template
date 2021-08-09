@@ -64,42 +64,42 @@
 }
 
 // margin
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .m-#{$i}0 {
     margin: #{$i}0px !important;
   }
 }
 
 // margin-top
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mt-#{$i}0 {
     margin-top: #{$i}0px !important;
   }
 }
 
 // margin-right
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mr-#{$i}0 {
     margin-right: #{$i}0px !important;
   }
 }
 
 // margin-bottom
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mb-#{$i}0 {
     margin-bottom: #{$i}0px !important;
   }
 }
 
 // margin-left
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .ml-#{$i}0 {
     margin-left: #{$i}0px !important;
   }
 }
 
 // margin-x
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mx-#{$i}0 {
     margin-left: #{$i}0px !important;
     margin-right: #{$i}0px !important;
@@ -107,7 +107,7 @@
 }
 
 // margin-y
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .my-#{$i}0 {
     margin-top: #{$i}0px !important;
     margin-bottom: #{$i}0px !important;
@@ -115,42 +115,42 @@
 }
 
 // padding
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .p-#{$i}0 {
     padding: #{$i}0px !important;
   }
 }
 
 // padding-top
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .pt-#{$i}0 {
     padding-top: #{$i}0px !important;
   }
 }
 
 // padding-right
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .pr-#{$i}0 {
     padding-right: #{$i}0px !important;
   }
 }
 
 // padding-bottom
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .pb-#{$i}0 {
     padding-bottom: #{$i}0px !important;
   }
 }
 
 // padding-left
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .pl-#{$i}0 {
     padding-left: #{$i}0px !important;
   }
 }
 
 // padding-x
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .px-#{$i}0 {
     padding-left: #{$i}0px !important;
     padding-right: #{$i}0px !important;
@@ -158,7 +158,7 @@
 }
 
 // padding-y
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .py-#{$i}0 {
     padding-top: #{$i}0px !important;
     padding-bottom: #{$i}0px !important;
@@ -233,42 +233,42 @@
   }
 
   // margin
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .m-sm-#{$i}0 {
       margin: #{$i}0px !important;
     }
   }
 
   // margin-top-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-sm-#{$i}0 {
       margin-top: #{$i}0px !important;
     }
   }
 
   // margin-right-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-sm-#{$i}0 {
       margin-right: #{$i}0px !important;
     }
   }
 
   // margin-bottom-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-sm-#{$i}0 {
       margin-bottom: #{$i}0px !important;
     }
   }
 
   // margin-left-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-sm-#{$i}0 {
       margin-left: #{$i}0px !important;
     }
   }
 
   // margin-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mx-sm-#{$i}0 {
       margin-left: #{$i}0px !important;
       margin-right: #{$i}0px !important;
@@ -276,7 +276,7 @@
   }
 
   // margin-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .my-sm-#{$i}0 {
       margin-top: #{$i}0px !important;
       margin-bottom: #{$i}0px !important;
@@ -284,42 +284,42 @@
   }
 
   // padding
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .p-sm-#{$i}0 {
       padding: #{$i}0px !important;
     }
   }
 
   // padding-top-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pt-sm-#{$i}0 {
       padding-top: #{$i}0px !important;
     }
   }
 
   // padding-right-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pr-sm-#{$i}0 {
       padding-right: #{$i}0px !important;
     }
   }
 
   // padding-bottom-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pb-sm-#{$i}0 {
       padding-bottom: #{$i}0px !important;
     }
   }
 
   // padding-left-sm
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pl-sm-#{$i}0 {
       padding-left: #{$i}0px !important;
     }
   }
 
   // padding-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .px-sm-#{$i}0 {
       padding-left: #{$i}0px !important;
       padding-right: #{$i}0px !important;
@@ -327,7 +327,7 @@
   }
 
   // padding-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .py-sm-#{$i}0 {
       padding-top: #{$i}0px !important;
       padding-bottom: #{$i}0px !important;
@@ -403,42 +403,42 @@
   }
 
   // margin
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .m-md-#{$i}0 {
       margin: #{$i}0px !important;
     }
   }
 
   // margin-top-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-md-#{$i}0 {
       margin-top: #{$i}0px !important;
     }
   }
 
   // margin-right-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-md-#{$i}0 {
       margin-right: #{$i}0px !important;
     }
   }
 
   // margin-bottom-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-md-#{$i}0 {
       margin-bottom: #{$i}0px !important;
     }
   }
 
   // margin-left-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-md-#{$i}0 {
       margin-left: #{$i}0px !important;
     }
   }
 
   // margin-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mx-md-#{$i}0 {
       margin-left: #{$i}0px !important;
       margin-right: #{$i}0px !important;
@@ -446,7 +446,7 @@
   }
 
   // margin-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .my-md-#{$i}0 {
       margin-top: #{$i}0px !important;
       margin-bottom: #{$i}0px !important;
@@ -454,42 +454,42 @@
   }
 
   // padding
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .p-md-#{$i}0 {
       padding: #{$i}0px !important;
     }
   }
 
   // padding-top-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pt-md-#{$i}0 {
       padding-top: #{$i}0px !important;
     }
   }
 
   // padding-right-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pr-md-#{$i}0 {
       padding-right: #{$i}0px !important;
     }
   }
 
   // padding-bottom-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pb-md-#{$i}0 {
       padding-bottom: #{$i}0px !important;
     }
   }
 
   // padding-left-md
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pl-md-#{$i}0 {
       padding-left: #{$i}0px !important;
     }
   }
 
   // padding-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .px-md-#{$i}0 {
       padding-left: #{$i}0px !important;
       padding-right: #{$i}0px !important;
@@ -497,7 +497,7 @@
   }
 
   // padding-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .py-md-#{$i}0 {
       padding-top: #{$i}0px !important;
       padding-bottom: #{$i}0px !important;
@@ -573,42 +573,42 @@
   }
 
   // margin
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .m-lg-#{$i}0 {
       margin: #{$i}0px !important;
     }
   }
 
   // margin-top-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-lg-#{$i}0 {
       margin-top: #{$i}0px !important;
     }
   }
 
   // margin-right-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-lg-#{$i}0 {
       margin-right: #{$i}0px !important;
     }
   }
 
   // margin-bottom-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-lg-#{$i}0 {
       margin-bottom: #{$i}0px !important;
     }
   }
 
   // margin-left-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-lg-#{$i}0 {
       margin-left: #{$i}0px !important;
     }
   }
 
   // margin-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mx-lg-#{$i}0 {
       margin-left: #{$i}0px !important;
       margin-right: #{$i}0px !important;
@@ -616,7 +616,7 @@
   }
 
   // margin-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .my-lg-#{$i}0 {
       margin-top: #{$i}0px !important;
       margin-bottom: #{$i}0px !important;
@@ -624,42 +624,42 @@
   }
 
   // padding
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .p-lg-#{$i}0 {
       padding: #{$i}0px !important;
     }
   }
 
   // padding-top-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pt-lg-#{$i}0 {
       padding-top: #{$i}0px !important;
     }
   }
 
   // padding-right-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pr-lg-#{$i}0 {
       padding-right: #{$i}0px !important;
     }
   }
 
   // padding-bottom-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pb-lg-#{$i}0 {
       padding-bottom: #{$i}0px !important;
     }
   }
 
   // padding-left-lg
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pl-lg-#{$i}0 {
       padding-left: #{$i}0px !important;
     }
   }
 
   // padding-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .px-lg-#{$i}0 {
       padding-left: #{$i}0px !important;
       padding-right: #{$i}0px !important;
@@ -667,7 +667,7 @@
   }
 
   // padding-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .py-lg-#{$i}0 {
       padding-top: #{$i}0px !important;
       padding-bottom: #{$i}0px !important;
@@ -743,42 +743,42 @@
   }
 
   // margin
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .m-xl-#{$i}0 {
       margin: #{$i}0px !important;
     }
   }
 
   // margin-top-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-xl-#{$i}0 {
       margin-top: #{$i}0px !important;
     }
   }
 
   // margin-right-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-xl-#{$i}0 {
       margin-right: #{$i}0px !important;
     }
   }
 
   // margin-bottom-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-xl-#{$i}0 {
       margin-bottom: #{$i}0px !important;
     }
   }
 
   // margin-left-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-xl-#{$i}0 {
       margin-left: #{$i}0px !important;
     }
   }
 
   // margin-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mx-xl-#{$i}0 {
       margin-left: #{$i}0px !important;
       margin-right: #{$i}0px !important;
@@ -786,7 +786,7 @@
   }
 
   // margin-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .my-xl-#{$i}0 {
       margin-top: #{$i}0px !important;
       margin-bottom: #{$i}0px !important;
@@ -794,42 +794,42 @@
   }
 
   // padding
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .p-xl-#{$i}0 {
       padding: #{$i}0px !important;
     }
   }
 
   // padding-top-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pt-xl-#{$i}0 {
       padding-top: #{$i}0px !important;
     }
   }
 
   // padding-right-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pr-xl-#{$i}0 {
       padding-right: #{$i}0px !important;
     }
   }
 
   // padding-bottom-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pb-xl-#{$i}0 {
       padding-bottom: #{$i}0px !important;
     }
   }
 
   // padding-left-xl
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .pl-xl-#{$i}0 {
       padding-left: #{$i}0px !important;
     }
   }
 
   // padding-x
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .px-xl-#{$i}0 {
       padding-left: #{$i}0px !important;
       padding-right: #{$i}0px !important;
@@ -837,7 +837,7 @@
   }
 
   // padding-y
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .py-xl-#{$i}0 {
       padding-top: #{$i}0px !important;
       padding-bottom: #{$i}0px !important;
@@ -845,51 +845,222 @@
   }
 }
 
+// extra-large screen devices (width > 1400) 
+@media (min-width: 1400px) {
+  .m-xxl-0 {
+    margin: 0 !important;
+  }
+
+  .mx-xxl-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .mt-xxl-0 {
+    margin-top: 0 !important;
+  }
+
+  .mr-xxl-0 {
+    margin-right: 0 !important;
+  }
+
+  .mb-xxl-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .ml-xxl-0 {
+    margin-left: 0 !important;
+  }
+
+  .mx-xxl-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .my-xxl-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .p-xxl-0 {
+    padding: 0 !important;
+  }
+
+  .pt-xxl-0 {
+    padding-top: 0 !important;
+  }
+
+  .pr-xxl-0 {
+    padding-right: 0 !important;
+  }
+
+  .pb-xxl-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .pl-xxl-0 {
+    padding-left: 0 !important;
+  }
+
+  .px-xxl-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .py-xxl-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  // margin
+  @for $i from 1 through 15 {
+    .m-xxl-#{$i}0 {
+      margin: #{$i}0px !important;
+    }
+  }
+
+  // margin-top-xl
+  @for $i from 1 through 15 {
+    .mt-xxl-#{$i}0 {
+      margin-top: #{$i}0px !important;
+    }
+  }
+
+  // margin-right-xl
+  @for $i from 1 through 15 {
+    .mr-xxl-#{$i}0 {
+      margin-right: #{$i}0px !important;
+    }
+  }
+
+  // margin-bottom-xl
+  @for $i from 1 through 15 {
+    .mb-xxl-#{$i}0 {
+      margin-bottom: #{$i}0px !important;
+    }
+  }
+
+  // margin-left-xl
+  @for $i from 1 through 15 {
+    .ml-xxl-#{$i}0 {
+      margin-left: #{$i}0px !important;
+    }
+  }
+
+  // margin-x
+  @for $i from 1 through 15 {
+    .mx-xxl-#{$i}0 {
+      margin-left: #{$i}0px !important;
+      margin-right: #{$i}0px !important;
+    }
+  }
+
+  // margin-y
+  @for $i from 1 through 15 {
+    .my-xxl-#{$i}0 {
+      margin-top: #{$i}0px !important;
+      margin-bottom: #{$i}0px !important;
+    }
+  }
+
+  // padding
+  @for $i from 1 through 15 {
+    .p-xxl-#{$i}0 {
+      padding: #{$i}0px !important;
+    }
+  }
+
+  // padding-top-xl
+  @for $i from 1 through 15 {
+    .pt-xxl-#{$i}0 {
+      padding-top: #{$i}0px !important;
+    }
+  }
+
+  // padding-right-xl
+  @for $i from 1 through 15 {
+    .pr-xxl-#{$i}0 {
+      padding-right: #{$i}0px !important;
+    }
+  }
+
+  // padding-bottom-xl
+  @for $i from 1 through 15 {
+    .pb-xxl-#{$i}0 {
+      padding-bottom: #{$i}0px !important;
+    }
+  }
+
+  // padding-left-xl
+  @for $i from 1 through 15 {
+    .pl-xxl-#{$i}0 {
+      padding-left: #{$i}0px !important;
+    }
+  }
+
+  // padding-x
+  @for $i from 1 through 15 {
+    .px-xxl-#{$i}0 {
+      padding-left: #{$i}0px !important;
+      padding-right: #{$i}0px !important;
+    }
+  }
+
+  // padding-y
+  @for $i from 1 through 15 {
+    .py-xxl-#{$i}0 {
+      padding-top: #{$i}0px !important;
+      padding-bottom: #{$i}0px !important;
+    }
+  }
+}
+
+
 // negative spacing
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mt-n#{$i}0 {
     margin-top: -#{$i}0px !important;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mr-n#{$i}0 {
     margin-right: -#{$i}0px !important;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .mb-n#{$i}0 {
     margin-bottom: -#{$i}0px !important;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 15 {
   .ml-n#{$i}0 {
     margin-left: -#{$i}0px !important;
   }
 }
 
 @media(min-width: 576px) {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-sm-n#{$i}0 {
       margin-top: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-sm-n#{$i}0 {
       margin-right: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-sm-n#{$i}0 {
       margin-bottom: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-sm-n#{$i}0 {
       margin-left: -#{$i}0px !important;
     }
@@ -897,25 +1068,25 @@
 }
 
 @media(min-width: 768px) {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-md-n#{$i}0 {
       margin-top: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-md-n#{$i}0 {
       margin-right: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-md-n#{$i}0 {
       margin-bottom: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-md-n#{$i}0 {
       margin-left: -#{$i}0px !important;
     }
@@ -923,25 +1094,25 @@
 }
 
 @media(min-width: 992px) {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-lg-n#{$i}0 {
       margin-top: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-lg-n#{$i}0 {
       margin-right: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-lg-n#{$i}0 {
       margin-bottom: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-lg-n#{$i}0 {
       margin-left: -#{$i}0px !important;
     }
@@ -949,25 +1120,25 @@
 }
 
 @media(min-width: 1200px) {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mt-xl-n#{$i}0 {
       margin-top: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mr-xl-n#{$i}0 {
       margin-right: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .mb-xl-n#{$i}0 {
       margin-bottom: -#{$i}0px !important;
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 15 {
     .ml-xl-n#{$i}0 {
       margin-left: -#{$i}0px !important;
     }

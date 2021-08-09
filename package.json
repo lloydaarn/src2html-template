@@ -4,7 +4,8 @@
   "description": "impulsion src2html template",
   "main": "Gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "node-sass scss/app.scss css/app.css --output-style compressed",
+    "dev": "node-sass -w scss/app.scss css/app.css --output-style compressed | browser-sync start --server --files 'css/*.css'"
   },
   "repository": {
     "type": "git",

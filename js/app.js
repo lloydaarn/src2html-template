@@ -17,7 +17,7 @@ app.windowSize = function () {
 
 
 // scroll to top button
-var _scrollTopBtn = function () {
+var _scrollHelper = function () {
   var scrollTopBtnFlag = true;
   var $scrollTopBtn = $('.scroll-top-btn');
 
@@ -51,5 +51,13 @@ var _scrollTopBtn = function () {
 
 
 $(document).ready(function () {
-  _scrollTopBtn();
+  _scrollHelper();
+
+  // plugins init
+  AOS.init({
+    once: true,
+    duration: 500
+  });
+  cssVars();
+  objectFitImages();
 });

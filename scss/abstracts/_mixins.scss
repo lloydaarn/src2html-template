@@ -50,6 +50,25 @@
   font-family: "object-fit:"+ $val;
 }
 
+@mixin fontawesome() {
+  font-family: "Font Awesome 5 Pro";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-weight: 400;
+}
+
+@mixin inset($val) {
+  top: $val;
+  right: $val;
+  bottom: $val;
+  left: $val;
+}
+
 @mixin link-unstyled {
   a {
 
@@ -58,5 +77,23 @@
     &:active {
       text-decoration: none;
     }
+  }
+}
+
+@mixin input-placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
   }
 }

@@ -1,0 +1,45 @@
+{
+    "editor.hover.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.tabSize": 4,
+    "editor.defaultFormatter":"HookyQR.beautify",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "html.format.wrapLineLength": 500,
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "explorer.autoReveal": false,
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "vetur.format.options.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "files.hotExit": "off",
+    "files.eol": "\n",
+    "editor.fontSize": 12,
+    "php.validate.executablePath": "C:/xampp/php/php.exe",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDelete": false,
+    "gulp.autoDetect": "on",
+}

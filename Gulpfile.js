@@ -3,9 +3,11 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 
 // Importing all the Gulp-related packages we want to use
+const babel = require('gulp-babel');
+const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require("browser-sync").create();
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -25,9 +27,9 @@ function build_css() {
     .pipe(sass()) // compile SCSS to CSS
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()])) // apply autoprefixer and optimize/minify 
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
     .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
     .pipe(dest('./css')) // put final CSS in dist folder
     .pipe(browserSync.stream()); // injext new css for live reloading
@@ -36,12 +38,25 @@ function build_css() {
 // JS task: minify js and add sourcemaps
 function build_js() {
   return src(path.js)
+    .pipe(plumber())
+    .pipe(
+      babel({
+        presets: [
+          [
+            "@babel/env",
+            {
+              modules: false
+            }
+          ]
+        ]
+      })
+    )
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(rename({
       suffix: ".min"
     }))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write("."))
     .pipe(dest('./js'));
 }
 

@@ -2,31 +2,31 @@
 
 // 1. Configuration
 @import
-  'abstracts/variables',
-  'abstracts/mixins';
+    'abstracts/variables',
+    'abstracts/mixins';
 
 // 2. Vendors
 @import
-  'vendor-extensions/bootstrap',
-  'vendor-extensions/slick';
+    'vendor-extensions/bootstrap',
+    'vendor-extensions/slick';
 
 // 3. Base stuff
 @import
-  'base/base',
-  'base/fonts',
-  'base/spacing',
-  'base/utils';
+    'base/base',
+    'base/fonts',
+    'base/utils';
 
 // 4. Components
 @import
-  'components/buttons';
+    'components/buttons',
+    'components/forms';
 
 // 5. Layout-related sections
 @import
-  'layout/header',
-  'layout/footer';
+    'layout/header',
+    'layout/footer';
 
 // 6. Page-specific styles
 @import
-  'pages/home',
-  'pages/innerpage';
+    'pages/home',
+    'pages/innerpage';

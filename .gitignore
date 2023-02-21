@@ -7,5 +7,8 @@ css/*
 js/*.min.js
 js/*.min.js.map
 
+*.php
+!/templates/**/*.php
+
 # OS or Editor folders
 Thumbs.db

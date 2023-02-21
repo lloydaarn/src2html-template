@@ -1,37 +1,20 @@
 {
   "name": "src2html-template",
-  "version": "4.0.0",
-  "description": "impulsion src2html template",
+  "version": "1.0.0",
+  "description": "blank psd2html template",
   "main": "Gulpfile.js",
   "scripts": {
-    "build:css": "node-sass scss/app.scss css/app.css --output-style compressed",
-    "dev": "node-sass -w scss/app.scss css/app.css --output-style compressed | browser-sync start --server --files 'css/*.css'"
+    "build": "sass scss/app.scss css/app.css --style compressed",
+    "dev": "sass scss/app.scss css/app.css -w --style compressed | browser-sync start --server --files css/*.css ./**/*.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lloydaarn/src2html-template.git"
   },
-  "keywords": [
-    "psd2html",
-    "src2html",
-    "blank",
-    "template"
-  ],
-  "author": "lloydaarn",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lloydaarn/src2html-template/issues"
   },
-  "homepage": "https://github.com/lloydaarn/src2html-template#readme",
-  "devDependencies": {
-    "autoprefixer": "^9.7.0",
-    "browser-sync": "^2.26.13",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2"
-  }
+  "homepage": "https://github.com/lloydaarn/src2html-template#readme"
 }

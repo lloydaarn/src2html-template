@@ -33,3 +33,12 @@
 .fw-black {
     font-weight: 900 !important;
 }
+
+.container-limited {
+    max-width: 1920px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}

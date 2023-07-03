@@ -4,22 +4,17 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-// 2. Vendors
-@import 'vendor-extensions/bootstrap';
-@import 'vendor-extensions/slick';
-
-// 3. Base stuff
+// 2. Base stuff
 @import 'base/base';
 @import 'base/fonts';
 @import 'base/utils';
 
-// 4. Components
-@import 'components/buttons';
+// 3. Components
+@import 'components/components';
+@import 'components/header';
+@import 'components/footer';
 
-// 5. Layout-related sections
-@import 'layout/header';
-@import 'layout/footer';
-
-// 6. Page-specific styles
+// 4. Page-specific styles
+@import 'pages/global';
 @import 'pages/home';
 @import 'pages/innerpage';

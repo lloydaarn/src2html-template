@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all overrides/extensions to bootstrap css
+// This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 .navbar {
     background-color: #f8f8fa;
@@ -22,11 +22,3 @@
     }
 }
 
-.container-limited {
-    max-width: 1920px;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}

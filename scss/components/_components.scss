@@ -1,3 +1,53 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.content-section-row {
+    position: relative;
+}
+
+.bg-img-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &._object-top img {
+        object-position: top;
+    }
+
+    &._object-right img {
+        object-position: right;
+    }
+
+    &._object-bottom img {
+        object-position: bottom;
+    }
+
+    &._object-left img {
+        object-position: left;
+    }
+
+    &+div {
+        position: relative;
+        z-index: 2;
+    }
+
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+    }
+}
+
+.container-limited {
+    max-width: 1920px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}

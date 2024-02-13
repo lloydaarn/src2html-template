@@ -34,11 +34,16 @@
     font-weight: 900 !important;
 }
 
-.container-limited {
-    max-width: 1920px;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+.fs-italic {
+    font-style: italic;
+}
+
+.anchor-overlay {
+    @include inset(0);
+    position: absolute;
+    z-index: 3;
+}
+
+.z-index-1 {
+    z-index: 1;
 }

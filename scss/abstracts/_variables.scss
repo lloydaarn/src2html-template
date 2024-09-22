@@ -2,5 +2,11 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 :root {
-    --bs-primary: red;
+    --bs-primary: #aa66cc;
+    --bs-primary-rgb: 170, 102, 204;
+    --bs-primary-dark: #8650a1;
+    --bs-primary-light: #b77fd3;
+
+    --bs-primary-bg-subtle: rgba(var(--bs-primary-rgb), 0.3);
+    --bs-primary-border-subtle: rgba(var(--bs-primary-rgb), 0.6);
 }

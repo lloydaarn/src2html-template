@@ -19,8 +19,8 @@ app.windowSize = function () {
 $(document).ready(function () {
 
     // plugins init
-    AOS.init({
-        once: true,
-        duration: 500,
-    });
+    // AOS.init({
+    //     once: true,
+    //     duration: 500,
+    // });
 });

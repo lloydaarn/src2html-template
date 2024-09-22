@@ -1,11 +1,10 @@
 {
   "name": "src2html-template",
-  "version": "1.0.0",
-  "description": "blank psd2html template",
-  "main": "Gulpfile.js",
+  "version": "6.0.0",
+  "description": "blank src2html template",
   "scripts": {
     "build": "sass scss/app.scss css/app.css --style compressed",
-    "dev": "sass scss/app.scss css/app.css -w --style compressed | browser-sync start --server --files css/*.css ./**/*.html"
+    "dev": "sass scss/app.scss css/app.css -w --style compressed | browser-sync start --server --files css/*.css ./**/*.html --ghostMode false"
   },
   "repository": {
     "type": "git",

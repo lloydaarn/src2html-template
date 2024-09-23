@@ -1,5 +1,5 @@
 # src2html-template (v6)
-blank src2html boilerplate for Implusion frontend development using custom **Bootstrap-5.3.3.** 
+Blank src2html boilerplate for Implusion frontend development using custom [**Bootstrap-5.3.3.**](https://github.com/lloydaarn/bootstrap.imp) 
 
 
 ## Project Setup

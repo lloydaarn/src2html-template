@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube IFrame API Example</title>
+</head>
+
+<body>
+    <button onclick="createYouTubePlayer('M7lc1UVf-VE')">Load YouTube Player</button>
+    <button onclick="removeYouTubePlayer()">Remove YouTube Player</button>
+    <div id="player"></div>
+
+    <script>
+        var player;
+
+        // Load the YouTube IFrame API script asynchronously
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Create a new YouTube player
+        function createYouTubePlayer(videoId) {
+            // Check if the player already exists, remove it if necessary
+            removeYouTubePlayer();
+
+            // Create the player instance
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: videoId,
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            // Automatically play the video when ready
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            // Handle player state changes
+        }
+
+        function removeYouTubePlayer() {
+            if (player) {
+                player.stopVideo(); // Stop the video if it's playing
+                player = null;      // Clear the player reference
+            }
+
+            // Remove the player element from the DOM
+            const playerElement = document.getElementById('player');
+            if (playerElement) {
+                playerElement.parentNode.removeChild(playerElement); // Remove the player from DOM
+            }
+
+            // Optionally recreate the player container if you want to load it again later
+            const newPlayerElement = document.createElement('div');
+            newPlayerElement.id = 'player';
+            document.body.appendChild(newPlayerElement);
+        }
+    </script>
+</body>
+
+</html>

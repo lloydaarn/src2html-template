@@ -11,11 +11,12 @@ var _swiperComponent = function () {
 
     // Initialize Swiper and YouTube Player API
     function initializeSwiper() {
-        swiper = new Swiper(".swiper-container", {
+        swiper = new Swiper(".swiper-component", {
             loop: true,
+            slidesPerView: 1,
             autoplay: {
                 delay: 4000, // 3 seconds
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
             pagination: {
                 el: ".swiper-pagination",
@@ -25,11 +26,15 @@ var _swiperComponent = function () {
                 init: function () {
                    checkSlide();
                 },
-                slideChange: () => {
-                    removeYouTubePlayer();
+                slideChange: (swiper) => {
+                    const newIndex = swiper.activeIndex;
 
-                    if (html5VideoPlayer) {
-                        html5VideoPlayer.pause();
+                    if (newIndex !== swiper.previousIndex) {
+                        removeYouTubePlayer();
+
+                        if (html5VideoPlayer) {
+                            html5VideoPlayer.pause();
+                        }
                     }
                 },
                 slideChangeTransitionEnd: () => {
@@ -83,10 +88,14 @@ var _swiperComponent = function () {
     function onPlayerStateChange(event) {
         if (event.data === YT.PlayerState.PLAYING) {
             if (swiper) swiper.autoplay.pause();
-        } else if (event.data === YT.PlayerState.ENDED || event.data === YT.PlayerState.PAUSED) {
+        } else if (event.data === YT.PlayerState.ENDED) {
             if (swiper) {
-                swiper.slideNext();
-                swiper.autoplay.resume();
+                if (swiper.slides.length == 1) {
+                    youtubePlayer.playVideo();
+                } else {
+                    swiper.slideNext();
+                    swiper.autoplay.resume();
+                }
             }
         }
     }
@@ -132,7 +141,39 @@ var _swiperComponent = function () {
     window.onYouTubeIframeAPIReady = function () {
         console.log("api ready");
         initializeSwiper();
+        _responsiveVideo();
     };
+};
+
+var _responsiveVideo = function () {
+    if ($(".responsive-video-canvas").length && app.windowSize().width > 991) {
+        var timeoutId;
+        var $responsiveVideoAspect = $(".responsive-video-aspect");
+        var $responsiveVideoWidth = $(".responsive-video-width");
+        var videoAspect = $responsiveVideoAspect.outerHeight() / $responsiveVideoAspect.outerWidth();
+
+        function responsiveVideoAdopt() {
+            windowAspect = $(window).height() / $(".banner-section").width();
+            if (windowAspect > videoAspect) {
+                $responsiveVideoWidth.width((windowAspect / videoAspect) * 100 + "%");
+            } else {
+                $responsiveVideoWidth.width(100 + "%");
+            }
+        }
+
+        $(window).resize(function () {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(responsiveVideoAdopt, 100);
+        });
+        $(window).on("orientationchange", function () {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(responsiveVideoAdopt, 100);
+        });
+        $(window).scroll(function () {
+            responsiveVideoAdopt();
+        });
+        responsiveVideoAdopt();
+    }
 };
 
 // Initialize Swiper on DOM content load

@@ -34,6 +34,7 @@ var _swiperComponent = function () {
 
                         if (html5VideoPlayer) {
                             html5VideoPlayer.pause();
+                            html5VideoPlayer.currentTime = 0;
                         }
                     }
                 },
@@ -105,8 +106,8 @@ var _swiperComponent = function () {
             youtubePlayer.stopVideo(); // Stop the video if it's playing
 
             // Remove the player element from the DOM and reattached
-            $(".swiper-slide.swiper-slide-active iframe").remove();
-            $(".swiper-slide.swiper-slide-active").append(`<div class="youtube-player" data-video-id="${youtubePlayer.options.videoId}"></div>`);
+            $(".swiper-slide.swiper-slide-active .youtube-player").remove();
+            $(".swiper-slide.swiper-slide-active .responsive-video-make-height").append(`<div class="responsive-video-canvas youtube-player" data-video-id="${youtubePlayer.options.videoId}"></div>`);
 
             youtubePlayer = null; // Clear the player reference
         }

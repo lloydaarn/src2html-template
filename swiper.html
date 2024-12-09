@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/vendors/bootstrap.imp-5.3.3/css/bootstrap.imp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/app.css">
     <style>
         .swiper-component {
             position: relative;
@@ -15,16 +16,6 @@
             margin-left: auto;
             margin-right: auto;
             overflow: hidden;
-        }
-
-        .swiper-slide {
-            width: 100%;
-            height: 100%;
-
-            >* {
-                width: 100%;
-                height: 100%;
-            }
         }
 
         .swiper-slide[data-video-type="youtube"] {
@@ -39,32 +30,54 @@
         <div class="swiper-wrapper">
             <!-- YouTube Video Slide -->
             <div class="swiper-slide" data-video-type="youtube">
-                <div class="youtube-player" data-video-id="dQw4w9WgXcQ"></div>
+                <div class="responsive-video-container">
+                    <div class="responsive-video-width">
+                        <div class="responsive-video-aspect">
+                            <div class="responsive-video-make-height">
+                                <div class="responsive-video-canvas youtube-player" data-video-id="dQw4w9WgXcQ"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- HTML5 Video Slide -->
             <div class="swiper-slide" data-video-type="video">
-                <video controls muted class="html5-video">
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div class="responsive-video-container">
+                    <div class="responsive-video-width">
+                        <div class="responsive-video-aspect">
+                            <div class="responsive-video-make-height">
+                                <video class="responsive-video-canvas html5-video" controls muted>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
             <!-- Image Slide -->
             <div class="swiper-slide">
-                <img src="https://picsum.photos/200/300" alt="Image Slide" />
+                <div class="bg-img-fill">
+                    <img src="https://picsum.photos/1800/800" alt="Image Slide" />
+                </div>
             </div>
 
             <!-- HTML5 Video Slide -->
             <div class="swiper-slide" data-video-type="video">
-                <video controls muted class="html5-video">
-                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div class="responsive-video-container">
+                    <div class="responsive-video-width">
+                        <div class="responsive-video-aspect">
+                            <div class="responsive-video-make-height">
+                                <video class="responsive-video-canvas html5-video" controls muted>
+                                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-
         </div>
 
         <!-- Pagination and Navigation Buttons -->
